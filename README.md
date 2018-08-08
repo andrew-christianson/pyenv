@@ -361,6 +361,7 @@ name | default | description
 `PYENV_HOOK_PATH` | [_see wiki_][hooks] | Colon-separated list of paths searched for pyenv hooks.
 `PYENV_DIR` | `$PWD` | Directory to start searching for `.python-version` files.
 `PYTHON_BUILD_ARIA2_OPTS` | | Used to pass additional parameters to [`aria2`](https://aria2.github.io/).<br>if `aria2c` binary is available on PATH, pyenv use `aria2c` instead of `curl` or `wget` to download the Python Source code. If you have an unstable internet connection, you can use this variable to instruct `aria2` to accelerate the download.<br>In most cases, you will only need to use `-x 10 -k 1M` as value to `PYTHON_BUILD_ARIA2_OPTS` environment variable
+`PYENV_QUICK_WHICH` | unset | If this variable is 1, `pyenv which` won't report versions where the command is installed.  This can improve performance in some circumstances.
 
 
 

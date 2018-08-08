@@ -76,6 +76,9 @@ else
 
   echo "pyenv: $PYENV_COMMAND: command not found" >&2
 
+  if [ "$PYENV_QUICK_WHICH" = 1 ]; then
+      exit 127
+  fi
   versions="$(pyenv-whence "$PYENV_COMMAND" || true)"
   if [ -n "$versions" ]; then
     { echo
